@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de usuários</title>
+</head>
+<body>
+
+        <form action="{% url 'cadastro' %}" method="POST">
+            {% csrf_token %}
+            <div class="container">
+                <label for="nome"><b>Nome completo</b></label>
+                <input type="text" placeholder="Digite seu nome completo" name="nome" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Digite seu email" name="email" required>
+
+                <label for="password"><b>Senha</b></label>
+                <input type="password" placeholder="Digite sua senha" name="password" required>
+
+                <label for="password2"><b>Confirmação de senha</b></label>
+                <input type="password" placeholder="Digite sua senha novamente" name="password2" required>
+
+                <button type="submit">Cadastro</button>
+            </div>
+        </form>
+
+</body>
+</html>
